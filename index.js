@@ -5,13 +5,20 @@ CUENTA EL NUMERO DE LETRAS
 NUMERO DE VOCALES 
 CUENTA EL NUMERO DE CONSONANTES
 IMPRIMER TODA LA INFORMACION */ 
-
+ 
 var cad = require("./cadena");
 
-const cadena ="anita lava la tina";
+const cade ="anita lava la tina";
 
-var a= cad.consonantes(cadena);
-var b= cad.vocales(cadena);
-var c= cad.numletras(cadena);
-var d= cad.contarpalabras(cadena);
-var e= cad.palindromo(cadena);
+var e= cad.palindromo(cade);
+var d= cad.contarpalabras(cade);
+var c= cad.numletras(cade);
+var b= cad.vocales(cade);
+var a= cad.consonantes(cade);
+
+console.log("Es palindromo: "+cade);
+console.log("Palabras: "+d);
+console.log("Letras: "+c);
+console.log("Vocales: "+b);
+console.log("Consonantes: "+a);
+

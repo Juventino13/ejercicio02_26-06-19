@@ -6,54 +6,41 @@ RECIBE UNA CADENA
 -NUMERO DE VOCALES 
 -CUENTA EL NUMERO DE CONSONANTES
 -IMPRIMER TODA LA INFORMACION */ 
-
+ 
 
 function palindromo(cadena){
-    var comparar= cadena.split('').reverse().join(''); 
-    if ( comparar == cadena ){
-        console.log("Si es palindromo"); 
+    cadena=cadena.split(' ').join('');
+    var comparar= cadena.split(' ').reverse().join('');
+    if ( comparar === cadena ){
+        return comparar;
     }
-    console.log("Si es palindromo"); 
-    
 }
-
-    
-
 function contarpalabras(cadena){
     cadena= cadena.split(' ');
-    for (let i = 0; i <cadena .length; i++ ){
-    var aux = cadena[i].split('');
-    var contador= contador+1;      
+    for (let i = 0; i <cadena.length; i++ ){
+    var aux = cadena[i].split(' ');      
     cadena[i]= aux.join('');
-
+    var contador=i;
+    }
+    return contador+1; 
 }
-//return cadena split('').length; 
-return contador; 
-
-}
-
-console.log(contarpalabras("anitalavalatina")); 
 
 function numletras (cadena){
-    for (let i = 0; i <cadena .length; i++ ){
-        if (i==' ')continue;
-        var cont=cont+1;
+    cadena=cadena.split(' ').join('');
+    for (let i = 0; i <cadena.length; i++ ){
+        var cont=i+1;
     }
-    
-        return cont;
-//return cadena.split(" ").join('').length;  
-    }
-
-console.log("numero letras: "+ numletras("anitalavalatina")); 
+    return cont;
+}
 
 function vocales(cadena){
     var numvocales = cadena.match(/[aeiou]/gi).length;
-    console.log("Vocales:"+numvocales);
+    return numvocales;
 }
 
 function consonantes(cadena){
     var conson= cadena.match(/[bcdfghjklmnpqrstvwxyz]/gi).length;
-    console.log("Las consonantes son:"+conson);
+    return conson;
 }
 
 module.exports.palindromo = palindromo;
